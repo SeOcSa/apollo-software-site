@@ -34,7 +34,7 @@
 
   .menu-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:28px;height:28px;}
   .menu-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);}
-  #mobileNav{display:flex;flex-direction:column;gap:2px;padding:8px 6vw 18px;border-bottom:1px solid var(--line);background:var(--bg);}
+  #mobileNav{display:flex;flex-direction:column;gap:2px;padding:8px clamp(20px,6vw,48px) 18px;border-bottom:1px solid var(--line);background:var(--bg);}
   #mobileNav[hidden]{display:none !important;}
   #mobileNav a{padding:12px 0;font-size:1rem;color:var(--ink);border-bottom:1px solid var(--line);}
   #mobileNav a:last-child{border-bottom:none;}
@@ -87,8 +87,8 @@
   .service-tab .tab-tag{display:block;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted);margin-bottom:4px;transition:color .2s ease;}
   .service-tab.is-active .tab-tag{color:var(--accent);}
   .service-tab .tab-title{display:block;font-size:.98rem;font-weight:500;}
-  .service-stage{position:relative;background:var(--surface-2);min-height:340px;}
-  .service-panel{position:absolute;inset:0;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:28px;overflow:auto;}
+  .service-stage{background:var(--surface-2);min-height:340px;display:flex;}
+  .service-panel{width:100%;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;}
   .service-panel[hidden]{display:none;}
   .service-panel-body{display:flex;flex-direction:column;gap:14px;flex:1;min-width:0;}
   .service-panel-body h3{margin:0;font-size:1.4rem;font-weight:600;}
@@ -133,7 +133,7 @@
 <div class="rise" style="width:100%;min-height:100vh;background:var(--bg);color:var(--ink);position:relative;">
 
   <!-- top bar -->
-  <header style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 6vw;border-bottom:1px solid var(--line);background:rgba(11,10,8,0.86);backdrop-filter:blur(8px);">
+  <header style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px clamp(20px,6vw,48px);border-bottom:1px solid var(--line);background:rgba(11,10,8,0.86);backdrop-filter:blur(8px);">
     <div style="font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.05rem;letter-spacing:-.01em;">Apollo Software</div>
     <nav class="hide-mobile" style="display:flex;gap:28px;font-size:.92rem;">
       <a class="nav-link" href="#servicii" data-i18n="navServices">Servicii</a>
@@ -169,7 +169,7 @@
 
   <main>
     <!-- hero -->
-    <section id="hero-section" style="position:relative;margin:0 auto;padding:min(14vh,120px) 6vw 64px;max-width:1180px;overflow:hidden;">
+    <section id="hero-section" style="position:relative;margin:0 auto;padding:min(14vh,120px) clamp(20px,6vw,48px) 64px;max-width:1180px;overflow:hidden;">
       <div class="hero-glow" id="heroGlow"></div>
       <div class="hero-content">
         <div class="rise rise-1" style="font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:22px;">// software studio — timișoara</div>
@@ -187,7 +187,7 @@
     </section>
 
     <!-- spec strip -->
-    <div class="reveal" style="display:flex;flex-wrap:wrap;gap:12px 36px;padding:22px 6vw;border-block:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--muted);">
+    <div class="reveal" style="display:flex;flex-wrap:wrap;gap:12px 36px;padding:22px clamp(20px,6vw,48px);border-block:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--muted);">
       <span><span style="color:var(--ink);">CUI</span> 44046948</span>
       <span><span style="color:var(--ink);">REG. COM.</span> J2021000673027</span>
       <span><span style="color:var(--ink);">CAEN</span> 6201</span>
@@ -196,7 +196,7 @@
     </div>
 
     <!-- services: interactive selector -->
-    <section id="servicii" class="reveal" style="margin:0 auto;padding:96px 6vw;max-width:1180px;">
+    <section id="servicii" class="reveal" style="margin:0 auto;padding:96px clamp(20px,6vw,48px);max-width:1180px;">
       <div data-i18n="servicesEyebrow" style="font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Servicii</div>
       <h2 data-i18n="servicesH2" style="font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 40px;max-width:20ch;text-wrap:balance;">Trei discipline, o singură echipă responsabilă.</h2>
 
@@ -269,7 +269,7 @@
     </section>
 
     <!-- about -->
-    <section id="despre" class="reveal" style="margin:0 auto;padding:0 6vw 96px;max-width:1180px;">
+    <section id="despre" class="reveal" style="margin:0 auto;padding:0 clamp(20px,6vw,48px) 96px;max-width:1180px;">
       <div class="about-grid" style="display:grid;grid-template-columns:1.3fr 1fr;gap:56px;">
         <div>
           <div data-i18n="aboutEyebrow" style="font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Despre companie</div>
@@ -311,7 +311,7 @@
   </main>
 
   <!-- contact band — full-bleed -->
-  <section id="contact" class="reveal" style="width:100%;background:var(--accent);padding:96px 6vw 104px;">
+  <section id="contact" class="reveal" style="width:100%;background:var(--accent);padding:96px clamp(20px,6vw,48px) 104px;">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#0b0a08;opacity:.65;margin-bottom:14px;">// contact</div>
       <h2 data-i18n="contactH2" style="font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(2rem,4vw,3rem);margin:0 0 36px;max-width:16ch;color:#0b0a08;text-wrap:balance;">Un proiect în discuție?</h2>
@@ -326,7 +326,7 @@
     </div>
   </section>
 
-  <footer style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:26px 6vw 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;">
+  <footer style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:26px clamp(20px,6vw,48px) 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;">
     <span>© 2026 Apollo Software SRL</span>
     <span>CUI 44046948 · J2021000673027</span>
   </footer>
